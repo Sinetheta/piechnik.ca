@@ -1,0 +1,163 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Adam J Piechnik</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css styles/vendor.css -->
+        <link rel="stylesheet" href="bower_components/fullpage.js/jquery.fullPage.css" />
+        <!-- bower:css -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <ul id="main-menu">
+            <li data-menuanchor="home" class="active"><a href="#home">Home</a></li>
+            <li data-menuanchor="photography"><a href="#photography">Photography</a></li>
+            <li data-menuanchor="web"><a href="#web">Web</a></li>
+            <li data-menuanchor="print"><a href="#print">Print</a></li>
+            <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="section" data-anchor="home">
+            <div class="content">
+                <p>My passion is photography, but I can also help you create an inviting web presence or fufill your print media needs.</p>
+                <p><a href="#contact" class="btn">Contact Me</a></p>
+            </div>
+        </div>
+
+        <div class="section" data-anchor="photography">
+
+            <div class="slide" data-anchor="photo">
+                <div class="content">
+                    <p>OMG I TAKE SO MANY PICTURES</p>
+                </div>
+            </div>
+
+            <div class="slide" data-anchor="commercial">
+                <div class="content">
+                    <p>HOLY SHIT, IS THAT JJ ABRAMS' CRANE?</p>
+                </div>
+            </div>
+
+            <div class="slide" data-anchor="residential">
+                <div class="content">
+                    <p>I LOVE SOOT ON MY PLASMA SCREEN</p>
+                </div>
+            </div>
+
+            <div class="slide" data-anchor="portrait">
+                <div class="content">
+                    <p>THAT BACKGROUND ISN'T OUT OF FOCUS, IT'S A FAST MOVING TRAIN</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="section" data-anchor="web">
+            <div class="content">
+                <p>I CAN'T BELIEVE PEOPLE LET ME MAKE WEBSITES</p>
+            </div>
+        </div>
+
+        <div class="section" data-anchor="print">
+            <div class="content">
+                <p>83% OF ALL OF MY PRINT JOBS ARE PHOTOCOPIES OF MY ASS</p>
+            </div>
+        </div>
+
+        <div class="section" data-anchor="contact">
+            <div class="content">
+                <h2 class="text-center">How can I help?</h2>
+                <!--
+                <form action="#" id="contact-form">
+                    <textarea id="contact-message-input"
+                              name="message"
+                              placeholder="What’s on your mind? What do you want me shoot/build/fix/print?"
+                              spellcheck="true"
+                              required
+                    ></textarea>
+                    <input id="contact-email-input"
+                           name="email"
+                           type="email"
+                           spellcheck="false"
+                           maxlength="255"
+                           placeholder="you@yours.com"
+                           value=""
+                           required
+                    >
+                </form>
+                <p class="text-center"><button>Submit</button></p>
+                -->
+                <div id="wufoo-z8gly5y1gfrgmn">
+                    Fill out my <a href="https://sinetheta.wufoo.com/forms/z8gly5y1gfrgmn">online form</a>.
+                </div>
+                <script type="text/javascript">
+                var z8gly5y1gfrgmn;
+                (function(d, t) {
+                    var s = d.createElement(t), options = {
+                        'userName':'sinetheta',
+                        'formHash':'z8gly5y1gfrgmn',
+                        'autoResize':true,
+                        'height':'437',
+                        'async':true,
+                        'host':'wufoo.com',
+                        'header':'show',
+                        'ssl':true
+                    };
+                    s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
+                    s.onload = s.onreadystatechange = function() {
+                        var rs = this.readyState;
+                        if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+                        try {
+                            z8gly5y1gfrgmn = new WufooForm();
+                            z8gly5y1gfrgmn.initialize(options);
+                            z8gly5y1gfrgmn.display();
+                        } catch (e) {}
+                    };
+                    var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+                })(document, 'script');
+                </script>
+            </div>
+        </div>
+
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/jquery.ui/ui/jquery.ui.effect.js"></script>
+        <script src="bower_components/jquery.slimscroll/jquery.slimscroll.js"></script>
+        <script src="bower_components/fullpage.js/jquery.fullPage.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
