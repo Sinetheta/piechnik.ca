@@ -42,7 +42,7 @@ h2 em {
     padding: 28px;
     max-width: 440px;
     box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.1);
-    background: url(/images/diagonal-stripe-seamless.png);
+    background: url(../images/diagonal-stripe-seamless.png);
     -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
     /* prevent background from bleeding into border */
     -moz-background-clip: padding;     /* Firefox 3.6 */
@@ -57,25 +57,25 @@ h2 em {
     background-size: cover;
 }
 [data-anchor=photo] {
-    background-image: url('../images/golf.jpg');
+    background-image: url('..../images/golf.jpg');
 }
 [data-anchor=commercial] {
-    background-image: url('../images/crane.jpg');
+    background-image: url('..../images/crane.jpg');
 }
 [data-anchor=residential] {
-    background-image: url('../images/living-room.jpg');
+    background-image: url('..../images/living-room.jpg');
 }
 [data-anchor=portrait] {
-    background-image: url('../images/scarf.jpg');
+    background-image: url('..../images/scarf.jpg');
 }
 [data-anchor=web] {
-    background-image: url('../images/web.jpg');
+    background-image: url('..../images/web.jpg');
 }
 [data-anchor=print] {
-    background-image: url('../images/print.jpg');
+    background-image: url('..../images/print.jpg');
 }
 [data-anchor=contact] {
-    background-image: url('../images/mctavish-main.jpg');
+    background-image: url('..../images/mctavish-main.jpg');
 }
 
 button, .btn {
@@ -169,7 +169,7 @@ textarea {
     width: 180px;
     height: 65px;
     margin: 0 auto;
-    background: url(/images/logo.png);
+    background: url(../images/logo.png);
     background-size: 180px 65px;
     text-indent: -9999px;
 }
@@ -218,7 +218,7 @@ textarea {
     z-index: 1;
     left: 50%;
     color: #FFF;
-    background: url(/images/icon-arrow-up.png);
+    background: url(../images/icon-arrow-up.png);
     width: 28px;
     height: 28px;
     padding: 0;
@@ -233,7 +233,7 @@ textarea {
     opacity: 1;
 }
 #main-menu-toggle.closed {
-    background: url(/images/icon-arrow-down.png);
+    background: url(../images/icon-arrow-down.png);
 }
 
 
@@ -262,13 +262,13 @@ textarea {
     opacity: 1;
 }
 .social-facebook {
-    background: url(/images/icon-facebook.png);
+    background: url(../images/icon-facebook.png);
 }
 .social-twitter {
-    background: url(/images/icon-twitter.png);
+    background: url(../images/icon-twitter.png);
 }
 .social-email {
-    background: url(/images/icon-email.png);
+    background: url(../images/icon-email.png);
 }
 
 
@@ -279,7 +279,7 @@ textarea {
     height: 337px;
     float: right;
     margin: 5%;
-    background: url(/images/adam-circle.png);
+    background: url(../images/adam-circle.png);
 }
 
 
@@ -362,11 +362,11 @@ html, body {
 }
 .controlArrow.prev {
     left: 15px;
-    background: url(/images/icon-arrow-left.png);
+    background: url(../images/icon-arrow-left.png);
 }
 .controlArrow.next {
     right: 15px;
-    background: url(/images/icon-arrow-right.png);
+    background: url(../images/icon-arrow-right.png);
 }
 .scrollable {
     overflow: scroll;
