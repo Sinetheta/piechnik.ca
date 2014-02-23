@@ -353,6 +353,7 @@ html, body {
     width: 80px;
     margin-top: -40px;
     opacity: 0.5;
+    z-index: 1;
 }
 .controlArrow:hover {
     opacity: 0.75;
