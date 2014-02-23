@@ -57,25 +57,25 @@ h2 em {
     background-size: cover;
 }
 [data-anchor=photo] {
-    background-image: url('..../images/golf.jpg');
+    background-image: url('../images/golf.jpg');
 }
 [data-anchor=commercial] {
-    background-image: url('..../images/crane.jpg');
+    background-image: url('../images/crane.jpg');
 }
 [data-anchor=residential] {
-    background-image: url('..../images/living-room.jpg');
+    background-image: url('../images/living-room.jpg');
 }
 [data-anchor=portrait] {
-    background-image: url('..../images/scarf.jpg');
+    background-image: url('../images/scarf.jpg');
 }
 [data-anchor=web] {
-    background-image: url('..../images/web.jpg');
+    background-image: url('../images/web.jpg');
 }
 [data-anchor=print] {
-    background-image: url('..../images/print.jpg');
+    background-image: url('../images/print.jpg');
 }
 [data-anchor=contact] {
-    background-image: url('..../images/mctavish-main.jpg');
+    background-image: url('../images/mctavish-main.jpg');
 }
 
 button, .btn {
