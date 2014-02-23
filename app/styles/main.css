@@ -1,38 +1,56 @@
 body {
-    background: #fcfcfc
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #262626;
+    background-image: linear-gradient(45deg, #212121 25%, transparent 25%, transparent 75%, #212121 75%, #212121),
+    linear-gradient(45deg, #212121 25%, transparent 25%, transparent 75%, #212121 75%, #212121);
+    background-position: 0 0, 5px 5px;
+    background-size: 10px 10px;
+    color: #333333;
+    font-size: 15px;
+    font-family: 'Droid Sans', sans-serif;
 }
 p {
-    text-align: center;
-    font-size: 1.5em;
+    color: #333333;
+    line-height: 24px;
+}
+.lead {
+    font-style: italic;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
 }
 h2 {
-    text-align: center;
-    font-size: 3em;
+    margin-top: 0;
+    color: #FC1E91;
+    font-weight: 300;
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+h2 em {
+    color: #333333;
+    font-weight: 700;
+    font-style: normal;
 }
 
-.contentpage1 {
+.container {
     margin: 0 auto;
-    margin-top: 20px;
-    padding: 1em;
-    max-width: 1000px;
-    border-radius: .5em;
-    background: hsla(0, 0%, 40%, 0.90);
-    color: white;
+    max-width: 1200px;
+    position: relative;
 }
-
 
 .content {
-    margin: 0 auto;
-    padding: 1em;
-    max-width: 680px;
-    border-radius: .5em;
-    background: hsla(0, 0%, 40%, 0.90);
-    color: white;
+    float: right;
+    padding: 28px;
+    max-width: 440px;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.1);
+    background: url(/images/diagonal-stripe-seamless.png);
+    -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+    /* prevent background from bleeding into border */
+    -moz-background-clip: padding;     /* Firefox 3.6 */
+    background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
 }
 
 .slide, .section {
-    background: url('../images/adamBAK.jpg') no-repeat center center fixed;
+    background: no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -61,40 +79,43 @@ h2 {
 }
 
 button, .btn {
-    background: #FC1E91;
     display: inline-block;
     margin-bottom: 0;
-    padding: .5em 1em;
-    border: 2px solid black;
+    padding: 16px 24px;
     border-radius: .25em;
+    background: #FC1E91;
     color: white;
-    cursor: pointer;
     vertical-align: middle;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+    text-transform: uppercase;
+    outline: 0;
 }
 button:hover, .btn:hover {
-    color: #666;
     background: #FC1E91;
+    color: #666;
 }
 
 input, textarea {
     display: block;
-    width: 100%;
-    padding: 1em;
-    border-radius: .5em;
-    border: 0;
-    margin-bottom: 1em;
-    color: #7F8C8D;
-    outline: 0;
-    font-weight: 600;
     box-sizing: border-box;
+    margin-bottom: 1em;
+    padding: 1em;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    border-radius: .5em;
+    color: #7F8C8D;
+    font-weight: 600;
 }
 textarea {
     min-height: 20em;
@@ -102,116 +123,338 @@ textarea {
 
 /* Main menu
  * --------------------------------------- */
- #main-menu{
+.overlay {
     position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+#page-header {
+    z-index: 1;
+    width: 220px;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+#main-menu-container {
+    background: hsl(0, 0%, 92.2%);
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.1);
+}
+#page-header-tail {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+}
+#page-header-tail:before, #page-header-tail:after {
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: 70;
-    margin: 0;
+}
+#page-header-tail:before {
+    left: -1px;
+    border-top: 51px solid rgba(0, 0, 0, 0.1);
+    border-right: 111px solid rgba(0, 0, 0, 0);
+    border-left: 111px solid rgba(0, 0, 0, 0);
+}
+#page-header-tail:after {
+    border-top: 50px solid #EBEBEB;
+    border-right: 110px solid rgba(0, 0, 0, 0);
+    border-left: 110px solid rgba(0, 0, 0, 0);
+}
+
+#site-logo {
+    margin: 10px 0 0 0;
+}
+#site-logo a {
+    display: block;
+    width: 180px;
+    height: 65px;
+    margin: 0 auto;
+    background: url(/images/logo.png);
+    background-size: 180px 65px;
+    text-indent: -9999px;
+}
+#main-menu {
+    margin: 0 30px;
+    width: 160px;
     padding: 0;
-    width: 100%;
-    height: 3em;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: #58585a;
+    list-style: none;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    max-height: 255px;
+    transition: max-height 0.5s;
+}
+#main-menu.closed {
+    max-height: 0;
 }
 #main-menu li {
-    display: inline-block;
-    margin: .5em;
-    border-radius: .5em;
-    background: #fff;
-    background: hsla(0, 0%, 100%, 0.5);
-    color: #000;
+    border-bottom: 1px solid #58585a;
 }
 #main-menu li.active{
-    background: #666;
-    background: hsla(0, 0%, 0%, 0.5);
-    color: #fff;
+    color: white;
 }
-#main-menu li a{
-    color: #000;
+#main-menu li a {
+    display: block;
+    padding: 16px 0;
+    color: #58585a;
     text-decoration: none;
 }
-#main-menu li.active a:hover{
-    color: #000;
+#main-menu li a span{
+    color: #555;
 }
-#main-menu li:hover{
-    background: hsla(0, 0%, 100%, 0.8);
+#main-menu li.active a,
+#main-menu li a:hover {
+    color: black;
 }
-#main-menu li a,
-#main-menu li.active a{
-    display: block;
-    padding: .5em 1em;
+#main-menu li.active a span,
+#main-menu li a:hover span{
+    color: #A3A3A3;
 }
-#main-menu li.active a{
-    color: #fff;
+#main-menu-toggle {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    color: #FFF;
+    background: url(/images/icon-arrow-up.png);
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    opacity: 0.75;
+    margin-left: -14px;
+}
+#main-menu-toggle:hover {
+    opacity: 0.9;
+}
+#main-menu-toggle:active {
+    opacity: 1;
+}
+#main-menu-toggle.closed {
+    background: url(/images/icon-arrow-down.png);
 }
 
 
-/* First Page Image Switcher
+/* Social Icons
  * --------------------------------------- */
-  #adamfaceimages{
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    }
-  
-  #adamfaceleft {
-   display:inline-block;
-    float: left;
-    margin-left: 50px;
-    background: url('../images/adamfaceleft1.jpg');
-    width:400px;
-    height:400px;
-  }
 
-    #adamfaceleft:hover {
-   display:inline-block;
-    float: left;
-    margin-left: 50px;
-    background: url('../images/adamfaceleft2.jpg');
-    width:400px;
-    height:400px;
-  }
-
-#adamfaceleft img{
-    width:400px;
-    height:400px;
-} 
-
-#adamfacecenter {
-    display:inline-block;    
-    background: url('../images/adamfacecenter1.jpg');
-    width:400px;
-    height:400px;
+.social-icons {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 10px;
 }
-
-#adamfacecenter:hover {
-    display:inline-block;    
-    background: url('../images/adamfacecenter2.jpg');
-    width:400px;
-    height:400px;
-}
-
-#adamfacecenter img{
-    width:400px;
-    height:400px;
-    
-}
-#adamfaceright {
-    display:inline-block;
+.social-icons a {
+    display: block;
+    height: 50px;
+    width: 50px;
     float: right;
-    margin-right: 50px;
-    background-image: url('../images/adamfaceright1.jpg');
-    width:400px;
-    height:400px;
-} 
-
-#adamfaceright:hover {
-    display:inline-block;    
-    background: url('../images/adamfaceright2.jpg');
-    width:400px;
-    height:400px;
+    margin-left: 10px;
+    text-indent: -9999px;
+    opacity: 0.5;
+}
+.social-icons a:hover {
+    opacity: 0.75;
+}
+.social-icons a:active {
+    opacity: 1;
+}
+.social-facebook {
+    background: url(/images/icon-facebook.png);
+}
+.social-twitter {
+    background: url(/images/icon-twitter.png);
+}
+.social-email {
+    background: url(/images/icon-email.png);
 }
 
-#adamfaceright img{
-    width:400px;
-    height:400px;
-} 
+
+/* Home page
+ * --------------------------------------- */
+#derp-head {
+    width: 337px;
+    height: 337px;
+    float: right;
+    margin: 5%;
+    background: url(/images/adam-circle.png);
+}
+
+
+.clearfix:before,
+.clearfix:after {
+    display: table; /* 2 */
+    content: " "; /* 1 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/**
+ * fullPage 1.4.5
+ * https://github.com/alvarotrigo/fullPage.js
+ * MIT licensed
+ *
+ * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
+ */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+#superContainer {
+    height: 100%;
+    position: relative;
+}
+.section {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.slide {
+    float: left;
+}
+.slide, .slidesContainer {
+    height: 100%;
+    display: block;
+}
+.slides {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.section.table, .slide.table {
+    display: table;
+    width: 100%;
+}
+.tableCell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+.slidesContainer {
+    float: left;
+    position: relative;
+}
+.controlArrow {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    height: 80px;
+    width: 80px;
+    margin-top: -40px;
+    opacity: 0.5;
+}
+.controlArrow:hover {
+    opacity: 0.75;
+}
+.controlArrow:active {
+    opacity: 1;
+}
+.controlArrow.prev {
+    left: 15px;
+    background: url(/images/icon-arrow-left.png);
+}
+.controlArrow.next {
+    right: 15px;
+    background: url(/images/icon-arrow-right.png);
+}
+.scrollable {
+    overflow: scroll;
+}
+.easing {
+    -webkit-transition: all 0.7s ease-out;
+    -moz-transition: all 0.7s ease-out;
+    -o-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+}
+#fullPage-nav {
+    position: fixed;
+    margin-top: -32px;
+    top: 50%;
+    opacity: 1;
+}
+#fullPage-nav.right {
+    right: 17px;
+}
+#fullPage-nav.left {
+    left: 17px;
+}
+.fullPage-slidesNav {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    opacity: 1;
+}
+.fullPage-slidesNav.bottom {
+    bottom: 17px;
+}
+.fullPage-slidesNav.top {
+    top: 17px;
+}
+#fullPage-nav ul,
+.fullPage-slidesNav ul {
+  margin: 0;
+  padding: 0;
+}
+#fullPage-nav li,
+.fullPage-slidesNav li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 7px;
+    position:relative;
+}
+.fullPage-slidesNav li {
+    display: inline-block;
+}
+#fullPage-nav li a,
+.fullPage-slidesNav li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+#fullPage-nav li .active span,
+.fullPage-slidesNav .active span {
+    background: #333;
+}
+#fullPage-nav span,
+.fullPage-slidesNav span {
+    top: 2px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, 0);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+.fullPage-tooltip {
+    position: absolute;
+    color: #fff;
+    font-size: 14px;
+    font-family: arial, helvetica, sans-serif;
+    top: -2px;
+}
+.fullPage-tooltip.right {
+    right: 20px;
+}
+.fullPage-tooltip.left {
+    left: 20px;
+}
