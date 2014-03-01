@@ -7,6 +7,10 @@ $.fn.fullpage({
     onLeave: function(index, direction) {
         $('.social-icons').hide();
         $('.social-icons-shim').show();
+
+        if( !$('#main-menu').data('userControlled') ) {
+            $('#main-menu, #main-menu-toggle').removeClass('open');
+        }
     },
     afterLoad: function( anchorLink, index, slideIndex, direction){
         if(index == 1 || index == 5){
@@ -17,13 +21,8 @@ $.fn.fullpage({
 });
 
 $('#main-menu-toggle').on('click', function() {
-    console.log('click')
-    $('#main-menu').toggleClass('closed');
-    $(this).toggleClass('closed');
+    $('#main-menu, #main-menu-toggle').toggleClass('open');
+    $('#main-menu').data('userControlled', true);
 });
 
-if($(window).width() > 0) {
-    $('#main-menu, #main-menu-toggle').removeClass('closed');
-}
-
-$('body').addClass('loaded')
+$('body').addClass('loaded');

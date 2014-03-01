@@ -194,11 +194,11 @@ textarea {
     text-align: center;
     text-transform: uppercase;
     overflow: hidden;
-    max-height: 255px;
+    max-height: 0;
     transition: max-height 0.5s;
 }
-#main-menu.closed {
-    max-height: 0;
+#main-menu.open {
+    max-height: 255px;
 }
 #main-menu li {
     border-bottom: 1px solid #58585a;
@@ -228,7 +228,7 @@ textarea {
     z-index: 1;
     left: 50%;
     color: #FFF;
-    background: url(../images/icon-arrow-up.png);
+    background: url(../images/icon-arrow-down.png);
     width: 28px;
     height: 28px;
     padding: 0;
@@ -242,8 +242,8 @@ textarea {
 #main-menu-toggle:active {
     opacity: 1;
 }
-#main-menu-toggle.closed {
-    background: url(../images/icon-arrow-down.png);
+#main-menu-toggle.open {
+    background: url(../images/icon-arrow-up.png);
 }
 
 
