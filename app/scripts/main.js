@@ -11,11 +11,19 @@ $.fn.fullpage({
         if( !$('#main-menu').data('userControlled') ) {
             $('#main-menu, #main-menu-toggle').removeClass('open');
         }
+        if(index === 1) {
+            $('#derp-head').data('changeImage', true);
+        }
     },
     afterLoad: function( anchorLink, index, slideIndex, direction){
-        if(index == 1 || index == 5){
+        if(index === 1 || index === 5){
             $('.social-icons').show();
             $('.social-icons-shim').hide();
+        }
+        if ( index !== 1 && $('#derp-head').data('changeImage') ) {
+            var imageIndex = Math.floor(Math.random()*14);
+            $('#derp-head').css('background', 'url(../images/adam-circle-' + imageIndex + '.png)');
+            $('#derp-head').data('changeImage', false);
         }
     }
 });

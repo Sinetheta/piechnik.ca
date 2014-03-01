@@ -285,11 +285,11 @@ textarea {
 /* Home page
  * --------------------------------------- */
 #derp-head {
-    width: 337px;
-    height: 337px;
+    width: 350px;
+    height: 350px;
     float: right;
     margin: 5%;
-    background: url(../images/adam-circle.png);
+    background: url(../images/adam-circle-0.png);
 }
 
 
