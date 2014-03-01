@@ -25,3 +25,5 @@ $('#main-menu-toggle').on('click', function() {
 if($(window).width() > 0) {
     $('#main-menu, #main-menu-toggle').removeClass('closed');
 }
+
+$('body').addClass('loaded')
