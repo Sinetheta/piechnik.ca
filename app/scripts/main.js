@@ -21,7 +21,7 @@ $.fn.fullpage({
             $('.social-icons-shim').hide();
         }
         if ( index !== 1 && $('#derp-head').data('changeImage') ) {
-            var imageIndex = Math.floor(Math.random()*14);
+            var imageIndex = Math.ceil(Math.random()*13);
             $('#derp-head').css('background', 'url(../images/adam-circle-' + imageIndex + '.png)');
             $('#derp-head').data('changeImage', false);
         }
