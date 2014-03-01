@@ -138,7 +138,7 @@ textarea {
     width: 220px;
     font-family: 'PT Sans Narrow', sans-serif;
     margin-top: -400px;
-    transition: margin 1s;
+    transition: margin 3s;
 }
 .loaded #page-header {
     margin-top: 0;
