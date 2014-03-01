@@ -30,6 +30,10 @@ $.fn.fullpage({
 
 $('#main-menu-toggle').on('click', function() {
     $('#main-menu, #main-menu-toggle').toggleClass('open');
+    $('#main-menu').data('userControlled', false);
+});
+
+$('#main-menu').on('click', 'a', function() {
     $('#main-menu').data('userControlled', true);
 });
 
