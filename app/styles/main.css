@@ -513,21 +513,6 @@ html, body {
     right: 15px;
     background: url(../images/icon-arrow-right.png);
 }
-.controlArrow.up, .controlArrow.down {
-    margin-top: auto;
-    top: auto;
-    bottom: auto;
-    left: 50%;
-    margin-left: -40px;
-}
-.controlArrow.up {
-    top: 15px;
-    background: url(../images/icon-arrow-up.png);
-}
-.controlArrow.down {
-    bottom: 15px;
-    background: url(../images/icon-arrow-down.png);
-}
 .scrollable {
     overflow: scroll;
 }
