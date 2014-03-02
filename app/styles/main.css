@@ -36,17 +36,17 @@ h2 em {
     max-width: 1200px;
     position: relative;
 }
-
-.content {
-    float: right;
-    padding: 28px;
-    max-width: 440px;
-    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.1);
+.content, .content-wrapper {
     background: url(../images/diagonal-stripe-seamless.png);
     -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
     /* prevent background from bleeding into border */
     -moz-background-clip: padding;     /* Firefox 3.6 */
     background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+.content {
+    float: right;
+    padding: 28px;
+    max-width: 440px;
     opacity: 0;
     transition: 1s 1s;
 }
@@ -320,6 +320,47 @@ textarea {
     clear: both;
 }
 
+/* Contact page
+ * --------------------------------------- */
+
+[data-anchor=contact] .tableCell {
+    display: block;
+}
+[data-anchor=contact] .content-wrapper {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    padding-bottom: 30px;
+}
+[data-anchor=contact] p {
+    text-align: center;
+}
+.contact-group {
+    line-height: 50px;
+    color: #333333;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+.contact-group em {
+    color: #FC1E91;
+    font-weight: 300;
+    font-style: normal;
+}
+.contact-group a span {
+    color: #FC1E91;
+}
+.contact-links a, .contact-group a {
+    margin: 0.5em;
+    opacity: 0.5;
+}
+.contact-links a:hover, .contact-group a:hover {
+    opacity: 0.75;
+}
+.contact-links a:active, .contact-group a:active {
+    opacity: 1;
+}
 
 /**
  * fullPage 1.4.5
