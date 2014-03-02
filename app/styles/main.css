@@ -387,8 +387,10 @@ textarea {
 [data-anchor=contact] .content-wrapper {
     position: absolute;
     bottom: 0;
-    padding-bottom: 30px;
+    padding-bottom: 16px;
     width: 100%;
+    background: url(../images/bg-content-bottom.png);
+    background-position-x: center;
 }
 [data-anchor=contact] p {
     text-align: center;
@@ -400,6 +402,15 @@ textarea {
     font-size: 18px;
     font-family: 'Lato', sans-serif;
     line-height: 50px;
+    width: 250px;
+    display: inline-block;
+    text-align: left;
+}
+.contact-group:first-of-type {
+    text-align: right;
+}
+.contact-group:first-of-type [class^=icon-] {
+    text-indent: 9999px;
 }
 .contact-group em {
     color: #FC1E91;
