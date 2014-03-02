@@ -246,39 +246,56 @@ textarea {
     background: url(../images/icon-arrow-up.png);
 }
 
+/* Icons
+ * --------------------------------------- */
+
+[class^="icon-"] {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    text-indent: -9999px;
+}
+.icon-facebook {
+    background: url(../images/icon-facebook.svg);
+}
+.icon-facebook-white {
+    background: url(../images/icon-facebook-white.svg);
+}
+.icon-skype {
+    background: url(../images/icon-skype.svg);
+}
+.icon-twitter {
+    background: url(../images/icon-twitter.svg);
+}
+.icon-twitter-white {
+    background: url(../images/icon-twitter-white.svg);
+}
+.icon-mail {
+    background: url(../images/icon-mail.svg);
+}
+.icon-mail-white {
+    background: url(../images/icon-mail-white.svg);
+}
 
 /* Social Icons
  * --------------------------------------- */
 
-.social-icons {
+.social-links {
     position: absolute;
     z-index: 1;
     right: 0;
     top: 10px;
 }
-.social-icons a {
-    display: block;
-    height: 50px;
-    width: 50px;
+.social-links a {
     float: right;
     margin-left: 10px;
-    text-indent: -9999px;
     opacity: 0.5;
 }
-.social-icons a:hover {
+.social-links a:hover {
     opacity: 0.75;
 }
-.social-icons a:active {
+.social-links a:active {
     opacity: 1;
-}
-.social-facebook {
-    background: url(../images/icon-facebook.png);
-}
-.social-twitter {
-    background: url(../images/icon-twitter.png);
-}
-.social-email {
-    background: url(../images/icon-email.png);
 }
 
 
