@@ -5,8 +5,7 @@ $.fn.fullpage({
     scrollingSpeed: 800,
     easing: 'easeInOutCubic',
     onLeave: function(index, direction) {
-        $('.social-icons').hide();
-        $('.social-icons-shim').show();
+        $('.social-links').hide();
 
         if( !$('#main-menu').data('userControlled') ) {
             $('#main-menu, #main-menu-toggle').removeClass('open');
@@ -17,8 +16,8 @@ $.fn.fullpage({
     },
     afterLoad: function( anchorLink, index, slideIndex, direction){
         if(index === 1 || index === 5){
-            $('.social-icons').show();
-            $('.social-icons-shim').hide();
+            $('.social-links').show();
+
         }
         if ( index !== 1 && $('#derp-head').data('changeImage') ) {
             var imageIndex = Math.ceil(Math.random()*13);

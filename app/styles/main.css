@@ -20,10 +20,10 @@ p {
 h2 {
     margin-top: 0;
     color: #333333;
+    text-transform: uppercase;
     font-weight: 700;
     font-size: 24px;
     font-family: 'Lato', sans-serif;
-    text-transform: uppercase;
 }
 h2 em {
     color: #FC1E91;
@@ -32,9 +32,9 @@ h2 em {
 }
 
 .container {
+    position: relative;
     margin: 0 auto;
     max-width: 1200px;
-    position: relative;
 }
 .content, .content-wrapper {
     background: url(../images/diagonal-stripe-seamless.png);
@@ -87,23 +87,23 @@ button, .btn {
     display: inline-block;
     margin-bottom: 0;
     padding: 16px 24px;
+    outline: 0;
     border-radius: .25em;
     background: #FC1E91;
     color: white;
     vertical-align: middle;
     text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
     white-space: nowrap;
-    font-family: 'Lato', sans-serif;
     font-size: 20px;
+    font-family: 'Lato', sans-serif;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
-    text-transform: uppercase;
-    outline: 0;
 }
 button:hover, .btn:hover {
     background: #FC1E91;
@@ -130,15 +130,15 @@ textarea {
  * --------------------------------------- */
 .overlay {
     position: fixed;
-    width: 100%;
     z-index: 1;
+    width: 100%;
 }
 #page-header {
     z-index: 1;
+    margin-top: -400px;
     width: 220px;
     font-family: 'PT Sans Narrow', sans-serif;
-    margin-top: -400px;
-    transition: margin 3s;
+    transition: margin 1s;
 }
 .loaded #page-header {
     margin-top: 0;
@@ -149,15 +149,15 @@ textarea {
 }
 #page-header-tail {
     position: relative;
+    padding: 10px;
     width: 200px;
     height: 50px;
-    padding: 10px;
 }
 #page-header-tail:before, #page-header-tail:after {
-    content: '';
     position: absolute;
     top: 0;
     left: 0;
+    content: '';
 }
 #page-header-tail:before {
     left: -1px;
@@ -176,25 +176,25 @@ textarea {
 }
 #site-logo a {
     display: block;
+    margin: 0 auto;
     width: 180px;
     height: 65px;
-    margin: 0 auto;
     background: url(../images/logo.png);
     background-size: 180px 65px;
     text-indent: -9999px;
 }
 #main-menu {
+    overflow: hidden;
     margin: 0 30px;
-    width: 160px;
     padding: 0;
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
+    max-height: 0;
+    width: 160px;
     color: #58585a;
     list-style: none;
     text-align: center;
     text-transform: uppercase;
-    overflow: hidden;
-    max-height: 0;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
     transition: max-height 0.5s;
 }
 #main-menu.open {
@@ -225,16 +225,16 @@ textarea {
 }
 #main-menu-toggle {
     position: absolute;
-    z-index: 1;
     left: 50%;
-    color: #FFF;
-    background: url(../images/icon-arrow-down.png);
+    z-index: 1;
+    margin-left: -14px;
+    padding: 0;
     width: 28px;
     height: 28px;
-    padding: 0;
     border: none;
+    background: url(../images/icon-arrow-down.png);
+    color: #FFF;
     opacity: 0.75;
-    margin-left: -14px;
 }
 #main-menu-toggle:hover {
     opacity: 0.9;
@@ -246,13 +246,59 @@ textarea {
     background: url(../images/icon-arrow-up.png);
 }
 
+@media (max-width: 719px) {
+    #page-header {
+        width: 100%;
+    }
+    #page-header-tail {
+        display: none;
+    }
+    #site-logo {
+        margin: 0;
+    }
+    #main-menu {
+        display: flex;
+        margin: 0.5em;
+        max-height: 9999px;
+        width: 100%;
+        justify-content: space-around;
+    }
+    #main-menu li {
+        margin: 0.5em;
+        border-right: 1px solid #58585A;
+        border-bottom: none;
+        flex-grow: 1;
+    }
+    div.tableCell {
+        display: block;
+    }
+    .content-wrapper {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    .slide .content-wrapper {
+        width: 25%;
+    }
+    .content {
+        float: none;
+        max-width: 9999px;
+    }
+    h2 {
+        text-align: center;
+    }
+    p {
+        text-align: center;
+    }
+}
+
 /* Icons
  * --------------------------------------- */
 
 [class^="icon-"] {
     display: inline-block;
-    height: 50px;
     width: 50px;
+    height: 50px;
     text-indent: -9999px;
 }
 .icon-facebook {
@@ -282,9 +328,9 @@ textarea {
 
 .social-links {
     position: absolute;
-    z-index: 1;
-    right: 0;
     top: 10px;
+    right: 0;
+    z-index: 1;
 }
 .social-links a {
     float: right;
@@ -302,22 +348,32 @@ textarea {
 /* Home page
  * --------------------------------------- */
 #derp-head {
-    width: 350px;
-    height: 350px;
     float: right;
     margin: 5%;
+    width: 350px;
+    height: 350px;
     background: url(../images/adam-maincircle.png);
 }
-
-
-.clearfix:before,
-.clearfix:after {
-    display: table; /* 2 */
-    content: " "; /* 1 */
+@media (max-width: 939px) {
+    .social-links {
+        display: none !important;
+    }
 }
-
-.clearfix:after {
-    clear: both;
+@media (min-width: 720px and max-width: 939px) {
+    #derp-head {
+        position: absolute;
+        z-index: -1;
+    }
+}
+@media (max-width: 719px) {
+    #derp-head {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -175px;
+        margin-left: -175px;
+        z-index: -1;
+    }
 }
 
 /* Contact page
@@ -327,21 +383,21 @@ textarea {
     display: block;
 }
 [data-anchor=contact] .content-wrapper {
-    bottom: 0;
     position: absolute;
-    width: 100%;
+    bottom: 0;
     padding-bottom: 30px;
+    width: 100%;
 }
 [data-anchor=contact] p {
     text-align: center;
 }
 .contact-group {
-    line-height: 50px;
     color: #333333;
+    text-transform: uppercase;
     font-weight: 700;
     font-size: 18px;
     font-family: 'Lato', sans-serif;
-    text-transform: uppercase;
+    line-height: 50px;
 }
 .contact-group em {
     color: #FC1E91;
@@ -361,6 +417,25 @@ textarea {
 .contact-links a:active, .contact-group a:active {
     opacity: 1;
 }
+@media (max-width: 500px) {
+    .contact-group {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Utilities
+ * --------------------------------------- */
+
+.clearfix:before,
+.clearfix:after {
+    display: table; /* 2 */
+    content: " "; /* 1 */
+}
+
+.clearfix:after {
+    clear: both;
+}
 
 /**
  * fullPage 1.4.5
@@ -374,8 +449,8 @@ html, body {
     padding: 0;
 }
 #superContainer {
-    height: 100%;
     position: relative;
+    height: 100%;
 }
 .section {
     position: relative;
@@ -387,13 +462,13 @@ html, body {
     float: left;
 }
 .slide, .slidesContainer {
-    height: 100%;
     display: block;
+    height: 100%;
 }
 .slides {
-    height: 100%;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
+    height: 100%;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
@@ -405,23 +480,23 @@ html, body {
 }
 .tableCell {
     display: table-cell;
-    vertical-align: middle;
     width: 100%;
     height: 100%;
+    vertical-align: middle;
 }
 .slidesContainer {
-    float: left;
     position: relative;
+    float: left;
 }
 .controlArrow {
     position: absolute;
     top: 50%;
-    cursor: pointer;
-    height: 80px;
-    width: 80px;
-    margin-top: -40px;
-    opacity: 0.5;
     z-index: 1;
+    margin-top: -40px;
+    width: 80px;
+    height: 80px;
+    opacity: 0.5;
+    cursor: pointer;
 }
 .controlArrow:hover {
     opacity: 0.75;
@@ -448,8 +523,8 @@ html, body {
 }
 #fullPage-nav {
     position: fixed;
-    margin-top: -32px;
     top: 50%;
+    margin-top: -32px;
     opacity: 1;
 }
 #fullPage-nav.right {
@@ -460,8 +535,8 @@ html, body {
 }
 .fullPage-slidesNav {
     position: absolute;
-    z-index: 4;
     left: 50%;
+    z-index: 4;
     opacity: 1;
 }
 .fullPage-slidesNav.bottom {
@@ -477,24 +552,24 @@ html, body {
 }
 #fullPage-nav li,
 .fullPage-slidesNav li {
+    position:relative;
     display: block;
+    margin: 7px;
     width: 14px;
     height: 13px;
-    margin: 7px;
-    position:relative;
 }
 .fullPage-slidesNav li {
     display: inline-block;
 }
 #fullPage-nav li a,
 .fullPage-slidesNav li a {
-    display: block;
     position: relative;
     z-index: 1;
+    display: block;
     width: 100%;
     height: 100%;
-    cursor: pointer;
     text-decoration: none;
+    cursor: pointer;
 }
 #fullPage-nav li .active span,
 .fullPage-slidesNav .active span {
@@ -502,24 +577,24 @@ html, body {
 }
 #fullPage-nav span,
 .fullPage-slidesNav span {
+    position: absolute;
     top: 2px;
     left: 2px;
+    z-index: 1;
     width: 8px;
     height: 8px;
     border: 1px solid #000;
-    background: rgba(0, 0, 0, 0);
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    position: absolute;
-    z-index: 1;
+    background: rgba(0, 0, 0, 0);
 }
 .fullPage-tooltip {
     position: absolute;
+    top: -2px;
     color: #fff;
     font-size: 14px;
     font-family: arial, helvetica, sans-serif;
-    top: -2px;
 }
 .fullPage-tooltip.right {
     right: 20px;
