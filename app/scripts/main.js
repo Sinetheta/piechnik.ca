@@ -4,15 +4,18 @@ $.fn.fullpage({
     resize : false,
     scrollingSpeed: 800,
     easing: 'easeInOutCubic',
-    onLeave: function(index, direction) {
+    onLeave: function(leaving, direction) {
+        var incoming = leaving + (direction === 'down'? 1: -1);
         $('#page-header').fadeOut();
         $('.social-links').hide();
 
-        if(index === 1) {
+        if(leaving === 1) {
             $('#derp-head').data('changeImage', true);
         }
+        $('body').removeClass('section-1 section-2 section-3 section-4 section-5');
+        $('body').addClass('section-' + incoming);
     },
-    afterLoad: function( anchorLink, index, slideIndex, direction){
+    afterLoad: function(anchorLink, index, slideIndex, direction) {
         $('#page-header').fadeIn();
         $('#page-header')[index === 1? 'addClass': 'removeClass']('navbar-vertical');
         $('#page-header')[index === 1? 'removeClass': 'addClass']('navbar-horizontal');
