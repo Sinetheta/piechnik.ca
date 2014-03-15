@@ -268,7 +268,7 @@ module.exports = function (grunt) {
                 'copy:styles',
                 'imagemin'
             ]
-        }
+        },
 
         'gh-pages': {
             options: {
