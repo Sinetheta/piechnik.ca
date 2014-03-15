@@ -374,30 +374,28 @@ textarea {
 /* Home page
  * --------------------------------------- */
 #derp-head {
-    float: right;
-    margin: 5%;
+    position: absolute;
+    top: 50%;
+    right: 520px;
+    z-index: -1;
+    margin-top: -175px;
     width: 350px;
     height: 350px;
     background: url(../images/adam-maincircle.png);
+    opacity: 0;
+    transition: opacity 0.5s;
 }
+.section-1 #derp-head {
+    opacity: 1;
+    transition: opacity 1s 0.5s;
+}
+
 @media (max-width: 939px) {
     .social-links {
         display: none !important;
     }
-}
-@media (min-width: 720px and max-width: 939px) {
-    #derp-head {
-        position: absolute;
-        z-index: -1;
-    }
-}
-@media (max-width: 719px) {
-    #derp-head {
-        position: fixed;
-        top: 50%;
+     #derp-head {
         left: 50%;
-        z-index: -1;
-        margin-top: -175px;
         margin-left: -175px;
     }
 }
