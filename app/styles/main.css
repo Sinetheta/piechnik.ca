@@ -33,9 +33,9 @@ h2 em {
 
 .container {
     position: relative;
+    z-index: 2;
     margin: 0 auto;
     max-width: 1200px;
-    z-index: 2;
 }
 .content, .content-wrapper {
     background: url(../images/diagonal-stripe-seamless.png);
@@ -372,9 +372,9 @@ textarea {
         position: fixed;
         top: 50%;
         left: 50%;
+        z-index: -1;
         margin-top: -175px;
         margin-left: -175px;
-        z-index: -1;
     }
 }
 
@@ -396,15 +396,15 @@ textarea {
     text-align: center;
 }
 .contact-group {
+    display: inline-block;
+    width: 250px;
     color: #333333;
+    text-align: left;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 18px;
     font-family: 'Lato', sans-serif;
     line-height: 50px;
-    width: 250px;
-    display: inline-block;
-    text-align: left;
 }
 .contact-group:first-of-type {
     text-align: right;
