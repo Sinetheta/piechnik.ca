@@ -288,6 +288,9 @@ textarea {
     .overlay .container {
         margin: 0;
     }
+    .social-links {
+        display: none !important;
+    }
     .navbar-vertical#page-header,
     .navbar-horizontal#page-header {
         width: 100%;
