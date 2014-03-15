@@ -5,6 +5,7 @@ $.fn.fullpage({
     scrollingSpeed: 800,
     easing: 'easeInOutCubic',
     onLeave: function(index, direction) {
+        $('#page-header').fadeOut();
         $('.social-links').hide();
 
         if(index === 1) {
@@ -12,6 +13,10 @@ $.fn.fullpage({
         }
     },
     afterLoad: function( anchorLink, index, slideIndex, direction){
+        $('#page-header').fadeIn();
+        $('#page-header')[index === 1? 'addClass': 'removeClass']('navbar-vertical');
+        $('#page-header')[index === 1? 'removeClass': 'addClass']('navbar-horizontal');
+
         if(index === 1 || index === 5){
             $('.social-links').show();
         }
