@@ -269,6 +269,15 @@ module.exports = function (grunt) {
                 'imagemin'
             ]
         }
+
+        'gh-pages': {
+            options: {
+                base: 'dist',
+                dotfiles: true,
+                message: 'Auto-generated commit'
+            },
+            src: '**/*'
+        }
     });
 
 
@@ -318,6 +327,11 @@ module.exports = function (grunt) {
         'rev',
         'usemin',
         'htmlmin'
+    ]);
+
+    grunt.registerTask('stage', [
+        'build',
+        'gh-pages'
     ]);
 
     grunt.registerTask('default', [
