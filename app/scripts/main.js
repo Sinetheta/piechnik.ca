@@ -7,9 +7,6 @@ $.fn.fullpage({
     onLeave: function(index, direction) {
         $('.social-links').hide();
 
-        if( !$('#main-menu').data('userControlled') ) {
-            $('#main-menu, #main-menu-toggle').removeClass('open');
-        }
         if(index === 1) {
             $('#derp-head').data('changeImage', true);
         }
@@ -17,7 +14,6 @@ $.fn.fullpage({
     afterLoad: function( anchorLink, index, slideIndex, direction){
         if(index === 1 || index === 5){
             $('.social-links').show();
-
         }
         if ( index !== 1 && $('#derp-head').data('changeImage') ) {
             var imageIndex = Math.ceil(Math.random()*13);
@@ -25,15 +21,6 @@ $.fn.fullpage({
             $('#derp-head').data('changeImage', false);
         }
     }
-});
-
-$('#main-menu-toggle').on('click', function() {
-    $('#main-menu, #main-menu-toggle').toggleClass('open');
-    $('#main-menu').data('userControlled', false);
-});
-
-$('#main-menu').on('click', 'a', function() {
-    $('#main-menu').data('userControlled', true);
 });
 
 $('body').addClass('loaded');
