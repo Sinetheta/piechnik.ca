@@ -39,11 +39,11 @@ $.fn.fullpage({
 });
 
 $('body').on('click', '[data-target]', function(e) {
+    var origin = $('body').prop('class').match(/section-(\d)/)[1];
+    var target = $(e.target).data('target');
     if(target === origin) {
         return false
     }
-    var origin = $('body').prop('class').match(/section-(\d)/)[1];
-    var target = $(e.target).data('target');
     $('body').addClass('leaving-' + origin + ' entering-' + target);
 });
 
