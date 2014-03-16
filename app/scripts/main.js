@@ -14,7 +14,7 @@ $.fn.fullpage({
         $('.social-links').hide();
 
         if(leaving === 1) {
-            $('#derp-head').data('changeImage', true);
+            $('.derp-head').data('changeImage', true);
         }
         if(!wasClickNavigation()) {
             $('body').addClass('entering-' + entering);
@@ -30,10 +30,10 @@ $.fn.fullpage({
         if(index === 1 || index === 5){
             $('.social-links').show();
         }
-        if ( index !== 1 && $('#derp-head').data('changeImage') ) {
+        if ( index !== 1 && $('.derp-head').data('changeImage') ) {
             var imageIndex = Math.ceil(Math.random()*13);
-            $('#derp-head').css('background', 'url(images/adam-circle-' + imageIndex + '.png)');
-            $('#derp-head').data('changeImage', false);
+            $('.derp-head').css('background', 'url(images/adam-circle-' + imageIndex + '.png)');
+            $('.derp-head').data('changeImage', false);
         }
     }
 });
