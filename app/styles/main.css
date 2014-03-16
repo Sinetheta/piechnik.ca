@@ -160,9 +160,8 @@ textarea {
  * --------------------------------------- */
 .overlay {
     position: fixed;
-    z-index: 1;
+    z-index: 20;
     width: 100%;
-    height: 100%;
 }
 /* minimum margin */
 @media (max-width: 1230px) {
@@ -171,6 +170,7 @@ textarea {
     }
 }
 #page-header {
+    position: absolute;
     font-family: 'PT Sans Narrow', sans-serif;
     transition: margin 1s;
 }
@@ -405,19 +405,22 @@ textarea {
 .section-1 .container {
         height: 100%;
     }
-#derp-head {
+.derp-head {
     position: absolute;
-    top: 50%;
-    right: 520px;
     z-index: -1;
-    margin-top: -175px;
     width: 350px;
     height: 350px;
     background: url(../images/adam-maincircle.png);
     opacity: 0;
     transition: opacity 0.5s;
 }
-.section-1 #derp-head {
+.derp-head.form-narrow {
+    display: none;
+}
+.derp-head.form-wide {
+    right: 520px;
+}
+.section-1 .derp-head {
     opacity: 1;
     transition: opacity 1s 0.5s;
 }
@@ -426,13 +429,21 @@ textarea {
     .section-1 .social-links {
         display: none !important;
     }
-     #derp-head {
+     .derp-head {
         left: 50%;
         margin-left: -175px;
+        top: 50%;
+        margin-top: -175px;
     }
     /* over derp-head */
     .section-1 .table {
         z-index: 10;
+    }
+    .derp-head.form-narrow {
+        display: block;
+    }
+    .derp-head.form-wide {
+        display: none;
     }
     /* early collapse of main menu */
     .overlay .container {
