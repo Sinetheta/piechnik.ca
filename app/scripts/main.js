@@ -42,7 +42,9 @@ $('body').on('click', '[data-target]', function(e) {
     console.log('click')
     var origin = $('body').prop('class').match(/section-(\d)/)[1];
     var target = $(e.target).data('target');
-    $('body').addClass('leaving-' + origin + ' entering-' + target);
+    if(target !== origin) {
+        $('body').addClass('leaving-' + origin + ' entering-' + target);
+    }
 });
 
 $('body').addClass('loaded');
