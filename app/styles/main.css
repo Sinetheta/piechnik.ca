@@ -558,8 +558,6 @@ textarea {
     bottom: 0;
     padding-bottom: 16px;
     width: 100%;
-    background: url(../images/bg-content-bottom.png);
-    background-position-x: center;
 }
 [data-anchor=contact] p {
     text-align: center;
