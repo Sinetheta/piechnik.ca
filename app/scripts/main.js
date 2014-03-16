@@ -39,7 +39,7 @@ $.fn.fullpage({
 });
 
 $('body').on('click', '[data-target]', function(e) {
-    var origin = $('body').prop('class').match(/section-(\d)/)[1];
+    var origin = parseInt($('body').prop('class').match(/section-(\d)/)[1], 0);
     var target = $(e.target).data('target');
     if(target === origin) {
         return false
