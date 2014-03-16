@@ -352,6 +352,9 @@ textarea {
 .icon-skype {
     background: url(../images/icon-skype.svg);
 }
+.icon-phone {
+    background: url(../images/icon-phone2.svg);
+}
 .icon-twitter {
     background: url(../images/icon-twitter.svg);
 }
@@ -364,6 +367,16 @@ textarea {
 .icon-mail-white {
     background: url(../images/icon-mail-white.svg);
 }
+.icon-linkedin {
+    background: url(../images/icon-linkedin.svg);
+}
+.icon-flickr {
+    background: url(../images/icon-flickr.svg);
+}
+.icon-google {
+    background: url(../images/Google-plus.svg);
+}
+
 
 /* Social Icons
  * --------------------------------------- */
@@ -506,7 +519,7 @@ textarea {
 }
 .contact-group {
     display: inline-block;
-    width: 250px;
+    width: 270px;
     color: #333333;
     text-align: left;
     text-transform: uppercase;
