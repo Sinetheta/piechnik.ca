@@ -8,6 +8,13 @@ body {
     font-size: 15px;
     font-family: 'Droid Sans', sans-serif;
 }
+body * {
+    opcacity: 0;
+    transition: opacity 0.25s;
+}
+body.loaded * {
+    opcacity: 1;
+}
 p {
     color: #333333;
     line-height: 24px;
