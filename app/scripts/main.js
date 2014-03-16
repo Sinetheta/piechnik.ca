@@ -39,12 +39,12 @@ $.fn.fullpage({
 });
 
 $('body').on('click', '[data-target]', function(e) {
-    console.log('click')
+    if(target === origin) {
+        return false
+    }
     var origin = $('body').prop('class').match(/section-(\d)/)[1];
     var target = $(e.target).data('target');
-    if(target !== origin) {
-        $('body').addClass('leaving-' + origin + ' entering-' + target);
-    }
+    $('body').addClass('leaving-' + origin + ' entering-' + target);
 });
 
 $('body').addClass('loaded');
