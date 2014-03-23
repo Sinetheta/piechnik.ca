@@ -215,7 +215,7 @@ textarea {
     margin: 0 auto;
     width: 180px;
     height: 65px;
-    background: url(../images/logo.png);
+    background: url(../images/logo.svg);
     background-size: 180px 65px;
     text-indent: -9999px;
 }
@@ -361,9 +361,6 @@ textarea {
 .icon-facebook {
     background: url(../images/icon-facebook.svg);
 }
-.icon-facebook-white {
-    background: url(../images/icon-facebook-white.svg);
-}
 .icon-skype {
     background: url(../images/icon-skype.svg);
 }
@@ -373,14 +370,8 @@ textarea {
 .icon-twitter {
     background: url(../images/icon-twitter.svg);
 }
-.icon-twitter-white {
-    background: url(../images/icon-twitter-white.svg);
-}
 .icon-mail {
     background: url(../images/icon-mail.svg);
-}
-.icon-mail-white {
-    background: url(../images/icon-mail-white.svg);
 }
 .icon-linkedin {
     background: url(../images/icon-linkedin.svg);
@@ -389,9 +380,14 @@ textarea {
     background: url(../images/icon-flickr.svg);
 }
 .icon-google {
-    background: url(../images/Google-plus.svg);
+    background: url(../images/google-plus.svg);
 }
-
+#outercircle {
+    fill: "#ee2375";
+}
+#innericon {
+    fill: #0d30c8;
+}
 
 /* Social Icons
  * --------------------------------------- */
@@ -686,11 +682,11 @@ html, body {
 }
 .controlArrow.prev {
     left: 15px;
-    background: url(../images/icon-arrow-left.png);
+    background: url(../images/icon-arrow-left.svg);
 }
 .controlArrow.next {
     right: 15px;
-    background: url(../images/icon-arrow-right.png);
+    background: url(../images/icon-arrow-right.svg);
 }
 .scrollable {
     overflow: scroll;
