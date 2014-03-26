@@ -1,3 +1,6 @@
+::selection { background: #e86499;}
+::-moz-selection { background: #e86499;}
+
 html {
     overflow-x: hidden;
 }
