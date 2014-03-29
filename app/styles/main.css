@@ -286,7 +286,7 @@ textarea {
     display: inline-block;
 }
 .navbar-horizontal #main-menu li:first-of-type {
-    display: none;
+/*    display: none;*/
 }
 .navbar-horizontal #main-menu li a {
     padding: 16px;
