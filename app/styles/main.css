@@ -385,12 +385,19 @@ textarea {
 .icon-google {
     background: url(../images/google-plus.svg);
 }
-#outercircle {
-    fill: "#ee2375";
+/* .outercircle {
+    fill: #000000;
 }
-#innericon {
-    fill: #0d30c8;
+.outercircle:hover {
+    fill: #ee2375;
 }
+.innericon {
+    fill: #000000;
+}
+.innericon:hover {
+    fill: #58585a;
+}
+/*
 
 /* Social Icons
  * --------------------------------------- */
@@ -404,10 +411,12 @@ textarea {
 .social-links a {
     float: right;
     margin-left: 10px;
-    opacity: 0.5;
+/*    opacity: 0.5;*/
+    fill: #DBDBDB;
 }
-.social-links a:hover {
+.social-links a:hover .innericon {
     opacity: 0.75;
+    fill: #ee2375;
 }
 .social-links a:active {
     opacity: 1;
@@ -589,12 +598,14 @@ textarea {
 .contact-links a, .contact-group a {
     margin: 0.5em;
     opacity: 0.5;
+    margin-top: 20px;
 }
 .contact-links a:hover, .contact-group a:hover {
-    opacity: 0.75;
+    opacity: 1.00;
 }
-.contact-links a:active, .contact-group a:active {
-    opacity: 1;
+.contact-links a:active .outercircle, .contact-group a:active {
+    fill: #ee2375;
+    opacity: 1.00;
 }
 @media (max-width: 500px) {
     .contact-group {
