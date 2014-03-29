@@ -119,7 +119,7 @@ button, .btn {
     user-select: none;
 }
 button:hover, .btn:hover {
-    background: #FC1E91;
+    background: #FD53AC;
     color: #666;
 }
 
