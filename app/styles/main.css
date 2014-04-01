@@ -596,9 +596,12 @@ textarea {
     color: #FC1E91;
 }
 .contact-links a, .contact-group a {
-    margin: 0.5em;
+    display: inline-block;
+    margin: 6px;
     opacity: 0.5;
-    margin-top: 20px;
+    margin-top: 0px;
+    vertical-align: top;
+    font-size:0;
 }
 .contact-links a:hover, .contact-group a:hover {
     opacity: 1.00;
