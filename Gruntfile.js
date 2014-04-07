@@ -66,7 +66,7 @@ module.exports = function (grunt) {
             },
             livereload: {
                 options: {
-                    open: true,
+                    open: 'http://localhost:9001/',
                     base: [
                         '.tmp',
                         '<%= yeoman.app %>'
@@ -89,6 +89,16 @@ module.exports = function (grunt) {
                     base: '<%= yeoman.dist %>',
                     livereload: false
                 }
+            }
+        },
+
+        throttle: {
+            dev: {
+                remote_port: 9000,
+                local_port: 9001,
+                upstream: 100*1024,
+                downstream: 200*1024,
+                keepalive: true
             }
         },
 
@@ -291,6 +301,7 @@ module.exports = function (grunt) {
             'concurrent:server',
             'autoprefixer',
             'connect:livereload',
+            'throttle',
             'watch'
         ]);
     });
