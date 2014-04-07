@@ -11,6 +11,50 @@
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
+        <style>
+        body * {
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+        body.loaded * {
+            opacity: 1;
+        }
+        body:before {
+            content: '';
+            display: inline-block;
+            position: absolute:
+            top: 0;
+            left: 0;
+            margin: 1em;
+            border-width: 30px;
+            border-radius: 50%;
+            border-style: solid;
+            border-color: hsla(0, 0%, 100%, 0.2) transparent;
+            -webkit-animation: spin 1s linear infinite;
+             -moz-animation: spin 1s linear infinite;
+               -o-animation: spin 1s linear infinite;
+                  animation: spin 1s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+            100% { -webkit-transform: rotate(359deg); }
+        }
+
+        @-moz-keyframes spin {
+            100% { -moz-transform: rotate(359deg); }
+        }
+
+        @-o-keyframes spin {
+            100% { -moz-transform: rotate(359deg); }
+        }
+
+        @keyframes spin {
+            100% {  transform: rotate(359deg); }
+        }
+        body.loaded:before {
+            display: none;
+        }
+        </style>
     </head>
     <body class="section-1">
         <!--[if lt IE 10]>

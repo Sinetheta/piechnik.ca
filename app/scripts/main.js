@@ -20,6 +20,9 @@ $.fn.fullpage({
             $('body').addClass('entering-' + entering);
         }
     },
+    afterRender: function() {
+        $('body').addClass('loaded');
+    },
     afterLoad: function(anchorLink, index, slideIndex, direction) {
         $('body').removeClass('leaving-1 leaving-2 leaving-3 leaving-4 leaving-5 entering-1 entering-2 entering-3 entering-4 entering-5');
         $('body').addClass('section-' + index);
@@ -46,5 +49,3 @@ $('body').on('click', '[data-target]', function(e) {
     }
     $('body').addClass('leaving-' + origin + ' entering-' + target);
 });
-
-$('body').addClass('loaded');
