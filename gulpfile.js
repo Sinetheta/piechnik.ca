@@ -142,3 +142,10 @@ gulp.task('watch', ['connect', 'serve'], function () {
     // Watch bower files
     gulp.watch('bower.json', ['wiredep']);
 });
+
+var deploy = require("gulp-gh-pages");
+
+gulp.task('deploy', function () {
+    gulp.src("./dist/**/*")
+        .pipe(deploy('https://github.com/Sinetheta/piechnik.ca.git', 'origin'));
+});
