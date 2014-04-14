@@ -95,7 +95,7 @@ button, .btn {
     margin-bottom: 0;
     padding: 16px 24px;
     outline: 0;
-    border-radius: .25em;
+    border-radius: 3.25em;
     background: #FC1E91;
     color: white;
     vertical-align: middle;
@@ -422,6 +422,15 @@ textarea {
  * --------------------------------------- */
 .section-1 .container {
     height: 100%;
+}
+[data-anchor="home"] .content {
+    background: transparent;
+}
+[data-anchor="home"] p {
+    color: #ffffff;
+}
+[data-anchor="home"] h2 {
+    color: #ffffff;
 }
 .derp-head {
     position: absolute;
