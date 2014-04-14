@@ -548,6 +548,30 @@ textarea {
     }
 }
 
+/* Photo Page
+ * --------------------------------------- */
+.flickrtext {
+    font-size: 24px;
+}
+.flickrouter {
+    fill: #999999;
+}
+.flickrinnerleft {
+    fill: #0063dc;
+}
+.flickrinnerright {
+    fill: #ff0084;
+}
+.lead a:hover .flickrouter {
+    fill: #3F3F3F;
+}
+.lead a:hover .flickrinnerleft {
+    fill: #3F3F3F;
+}
+.lead a:hover .flickrinnerright {
+    fill: #3F3F3F;
+}
+
 /* Contact page
  * --------------------------------------- */
 
