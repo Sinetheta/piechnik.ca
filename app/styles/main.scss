@@ -250,7 +250,7 @@ textarea {
 /* Landing page main menu
  * --------------------------------------- */
 .navbar-vertical#page-header {
-    margin-top: -400px;
+    margin-top: -500px;
     width: 220px;
 }
 .loaded .navbar-vertical#page-header {
@@ -393,7 +393,6 @@ textarea {
 .social-links a {
     float: right;
     margin-left: 10px;
-/*    opacity: 0.5;*/
     fill: #DBDBDB;
 }
 .social-links a:hover .innericon {
@@ -449,7 +448,7 @@ textarea {
 }
 .leaving-1 #main-menu-container {
     transition: margin 0.5s;
-    margin-top: -440px;
+    margin-top: -500px;
 }
 
 @media (max-width: 939px) {
