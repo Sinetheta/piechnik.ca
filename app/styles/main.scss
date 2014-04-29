@@ -42,14 +42,6 @@ h2 em {
     margin: 0 auto;
     max-width: 1200px;
 }
-.content, .content-wrapper {
-    background: url(../images/diagonal-stripe-seamless.png);
-    -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
-    /* prevent background from bleeding into border */
-    -moz-background-clip: padding;     /* Firefox 3.6 */
-    background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
-    opacity: .85;
-}
 .content {
     float: right;
     padding: 28px;
