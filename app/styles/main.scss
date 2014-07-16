@@ -577,6 +577,12 @@ textarea {
     display: block;
 }
 [data-anchor=contact] .content-wrapper {
+    background: url(../images/diagonal-stripe-seamless.png);
+    -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+    /* prevent background from bleeding into border */
+    -moz-background-clip: padding;     /* Firefox 3.6 */
+    background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+    opacity: .85;
     position: absolute;
     bottom: 0;
     padding-bottom: 16px;
