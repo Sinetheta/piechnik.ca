@@ -551,23 +551,17 @@ textarea {
     font-size: 25px;
     margin-left: 15px;
 }
-.flickrouter {
-    fill: #999999;
+.fivehundredouter {
+    fill: #484848;
 }
-.flickrinnerleft {
-    fill: #0063dc;
+.fivehundredinner {
+    fill: #ffffff;
 }
-.flickrinnerright {
-    fill: #ff0084;
+.lead a:hover .fivehundredouter {
+    fill: #CFCFCF;
 }
-.lead a:hover .flickrouter {
-    fill: #3F3F3F;
-}
-.lead a:hover .flickrinnerleft {
-    fill: #3F3F3F;
-}
-.lead a:hover .flickrinnerright {
-    fill: #3F3F3F;
+.lead a:hover .fivehundredinner {
+    fill: #484848;
 }
 
 /* Contact page
