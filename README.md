@@ -7,10 +7,10 @@ Getting Started
 ---------------
 
 1. [Install NodeJs](http://nodejs.org/).
-2. `$ npm install -g gulp bower` to [install Gulp and Bower](http://www.nitinh.com/2013/05/getting-started-with-grunt-bower/).
+2. `$ npm install -g gulp bower` to install [Gulp](http://gulpjs.com/) and [Bower](http://bower.io/).
 3. `$ npm install` to [install](https://npmjs.org/doc/install.html) development dependencies.
 4. `$ bower install` to fetch front-end components using [Bower](http://bower.io/).
-5. `$ gulp watch` to start up the development server using [Gulp](http://gulpjs.com/).
+5. `$ gulp serve` to start up the development server and watch source files for changes.
 
 Although this project was built using [Yeoman](http://yeoman.io/) it is not needed to make future changes. Gulp, however, is. Both to run the development server (which includes [liveReload](https://github.com/intesso/connect-livereload) and to compile the project for a production environment.
 

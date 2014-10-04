@@ -96,7 +96,7 @@ gulp.task('connect', function () {
 });
 
 // Open
-gulp.task('serve', ['connect', 'styles'], function() {
+gulp.task('serve', ['connect', 'watch'], function() {
   open("http://localhost:9000");
 });
 
@@ -118,7 +118,7 @@ gulp.task('wiredep', function () {
 });
 
 // Watch
-gulp.task('watch', ['connect', 'serve'], function () {
+gulp.task('watch', function () {
     // Watch for changes in `app` folder
     gulp.watch([
         'app/*.html',
