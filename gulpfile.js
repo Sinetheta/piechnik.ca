@@ -69,11 +69,10 @@ gulp.task('svg', function () {
 });
 gulp.task('images', ['svg'], function () {
     return gulp.src(['app/images/**/*', '!app/images/*.svg'])
-        .pipe($.cache($.imagemin({
-            optimizationLevel: 3,
+        .pipe($.imagemin({
             progressive: true,
             interlaced: true
-        })))
+        }))
         .pipe(gulp.dest('dist/images'))
         .pipe($.size());
 });
