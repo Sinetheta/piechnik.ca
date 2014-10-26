@@ -1,10 +1,10 @@
 {
-  "name": "piechnik-ca",
+  "name": "piechnik.ca",
   "private": true,
   "dependencies": {
-    "modernizr": "~2.6.2",
-    "jquery": "~1.11.0",
-    "fullpage.js": "~1.7.6"
-  },
-  "devDependencies": {}
+    "modernizr": "~2.8.3",
+    "jquery": "~2.1.1",
+    "fullpage.js": "~1.7.6",
+    "jquery.ui": "~1.11.2"
+  }
 }
