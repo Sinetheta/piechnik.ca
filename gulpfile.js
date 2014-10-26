@@ -31,26 +31,44 @@ gulp.task('scripts', function () {
 
 // HTML
 gulp.task('html', ['styles', 'scripts'], function () {
+    var assets = $.useref.assets();
     var jsFilter = $.filter('**/*.js');
     var cssFilter = $.filter('**/*.css');
 
     return gulp.src('app/*.html')
-        .pipe($.useref.assets())
+        .pipe(assets)
         .pipe(jsFilter)
         .pipe($.uglify())
         .pipe(jsFilter.restore())
         .pipe(cssFilter)
         .pipe($.csso())
         .pipe(cssFilter.restore())
-        .pipe($.useref.restore())
+        .pipe(assets.restore())
         .pipe($.useref())
         .pipe(gulp.dest('dist'))
         .pipe($.size());
 });
 
 // Images
-gulp.task('images', function () {
-    return gulp.src('app/images/**/*')
+gulp.task('svg', function () {
+  return gulp.src('app/images/*.svg')
+             .pipe($.svgmin())
+             .pipe($.svgstore({ fileName: 'icons.svg' }))
+             .pipe(gulp.dest('dist/images'))
+});
+gulp.task('svg', function () {
+    var svgs = gulp.src('app/images/*.svg')
+        .pipe($.svgstore({ inlineSvg: true }))
+    function fileContents (filePath, file) {
+        return file.contents.toString('utf8')
+    }
+    return gulp
+        .src('app/index.html')
+        .pipe($.inject(svgs, { transform: fileContents }))
+        .pipe(gulp.dest('svgtest/'))
+});
+gulp.task('images', ['svg'], function () {
+    return gulp.src(['app/images/**/*', '!app/images/*.svg'])
         .pipe($.cache($.imagemin({
             optimizationLevel: 3,
             progressive: true,
