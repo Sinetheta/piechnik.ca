@@ -51,22 +51,12 @@ gulp.task('html', ['styles', 'scripts'], function () {
 
 // Images
 gulp.task('svg', function () {
-  return gulp.src('app/images/*.svg')
-             .pipe($.svgmin())
-             .pipe($.svgstore({ fileName: 'icons.svg' }))
-             .pipe(gulp.dest('dist/images'))
+    return gulp.src('app/images/*.svg')
+        .pipe($.svgmin())
+        .pipe($.svgstore({ fileName: 'icons.svg' }))
+        .pipe(gulp.dest('dist/images'))
 });
-gulp.task('svg', function () {
-    var svgs = gulp.src('app/images/*.svg')
-        .pipe($.svgstore({ inlineSvg: true }))
-    function fileContents (filePath, file) {
-        return file.contents.toString('utf8')
-    }
-    return gulp
-        .src('app/index.html')
-        .pipe($.inject(svgs, { transform: fileContents }))
-        .pipe(gulp.dest('svgtest/'))
-});
+
 gulp.task('images', ['svg'], function () {
     return gulp.src(['app/images/**/*', '!app/images/*.svg'])
         .pipe($.imagemin({
