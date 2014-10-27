@@ -50,15 +50,9 @@ gulp.task('html', ['styles', 'scripts'], function () {
 });
 
 // Images
-gulp.task('svg', function () {
-    return gulp.src('app/images/*.svg')
-        .pipe($.svgmin())
-        .pipe($.svgstore({ fileName: 'icons.svg' }))
-        .pipe(gulp.dest('dist/images'))
-});
 
-gulp.task('images', ['svg'], function () {
-    return gulp.src(['app/images/**/*', '!app/images/*.svg'])
+gulp.task('images', function () {
+    return gulp.src(['app/images/**/*'])
         .pipe($.imagemin({
             progressive: true,
             interlaced: true
