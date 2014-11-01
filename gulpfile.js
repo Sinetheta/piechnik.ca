@@ -45,6 +45,7 @@ gulp.task('html', ['styles', 'scripts'], function () {
         .pipe(cssFilter.restore())
         .pipe(assets.restore())
         .pipe($.useref())
+        .pipe($.gzip())
         .pipe(gulp.dest('dist'))
         .pipe($.size());
 });
