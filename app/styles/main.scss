@@ -142,7 +142,7 @@ textarea {
 
 /* Collapse content
  * --------------------------------------- */
-@media (max-width: 719px) {
+@media (max-width: 1000px) {
     div.tableCell {
         display: block;
     }
@@ -632,6 +632,12 @@ textarea {
     fill: #ee2375;
     opacity: 1.00;
 }
+.phonelink {
+    font-size: 18px !important;
+    font-weight: 300 !important;
+    opacity: 1 !important;
+
+}
 @media (max-width: 500px) {
     .contact-group {
         display: block;
@@ -726,6 +732,16 @@ html, body {
 .controlArrow.next {
     right: 15px;
     background: url(../images/icon-arrow-right.svg);
+}
+@media (max-width: 1400px) {
+    .controlArrow {
+    top: 90%;
+    }
+}
+@media (max-width: 1000px) {
+    .controlArrow {
+    top: 50%;
+    }
 }
 .scrollable {
     overflow: scroll;
